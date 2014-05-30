@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe TestConfig do
-  # before do
-  #   ENV['TEST_ENV'] = 'env.yml'
-  # end
+  before do
+    ENV['TEST_ENV'] = 'env.yml'
+    TestConfig.configure!
+  end
 
   describe '#method_missing' do
     context 'existing key with truthy value' do
@@ -52,22 +53,32 @@ describe TestConfig do
       end
     end
 
-    # context 'complex data' do
-    #   pending
-    # end
+    context 'nested data' do
+      it 'should allow access to nested data' do
+        TestConfig.data_hash[:array_data][1].should == 'second item'
+      end
+    end
 
-    # context 'default.yml data overriden by env.yml' do
-    #   pending
-    # end
+    context 'environment specific data provided' do
+      it 'should return data unique to the env file' do
+        TestConfig.added_by_env_yaml.should == 'added by env.yml'
+      end
 
-    # context 'data added from env.yml' do
-    #   pending
-    # end
+      it 'should return data overwritten by the env file' do
+        TestConfig.overwritten_data.should == 'overwritten by env.yml'
+      end
+    end
   end
 
-  # describe '#has_key?' do
-  #   pending
-  # end
+  describe '#has_key?' do
+    it 'should return true for existing keys' do
+      TestConfig.has_key?(:existing_truthy).should == true
+    end
+
+    it 'should return false for nonexistent keys' do
+      TestConfig.has_key?(:nonexistent_key).should == false
+    end
+  end
 
   # describe '#load_file' do
   #   pending

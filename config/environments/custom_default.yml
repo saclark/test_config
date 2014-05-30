@@ -1,0 +1,1 @@
+default_test_value: 'from config/environments/custom_default.yml'
