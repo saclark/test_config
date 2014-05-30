@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Scott Clark']
   spec.email         = ['sclarkdev@gmail.com']
   spec.summary       = 'Flexible cucumber test configuration.'
-  spec.description   = 'Provides a flexible means of configuration for cucumber tests.'
+  spec.description   = 'A flexible means of configuration for cucumber tests.'
   spec.homepage      = 'https://github.com/saclark/test_config'
   spec.license       = 'MIT'
 
