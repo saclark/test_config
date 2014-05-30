@@ -1,3 +1,4 @@
+require 'coveralls/rake/task'
 require 'rspec/core/rake_task'
 require 'cucumber'
 require 'cucumber/rake/task'
@@ -9,6 +10,10 @@ RSpec::Core::RakeTask.new(:spec) do |task|
 end
 
 # Run with `rake cucumber`
-Cucumber::Rake::Task.new(:cucumber)
+Cucumber::Rake::Task.new(:features)
 
-task :default => [:spec, :cucumber]
+# For Coveralls
+Coveralls::RakeTask.new
+task :test_with_coveralls => [:spec, :features, 'coveralls:push']
+
+task :default => [:spec, :features]
