@@ -11,7 +11,7 @@ module TestConfig
   def self.configure!(options = {})
     opts = {
       :default_file => 'default.yml',
-      :source_direcotry => 'config/environments',
+      :source_directory => 'config/environments',
       :env_variable => 'TEST_ENV'
     }.merge(options)
 
@@ -19,11 +19,11 @@ module TestConfig
     env_data = {}
 
     if opts[:default_file]
-      default_data = load_file(opts[:default_file], opts[:source_direcotry])
+      default_data = load_file(opts[:default_file], opts[:source_directory])
     end
 
     if opts[:env_variable] && ENV[opts[:env_variable]]
-      env_data = load_file(ENV[opts[:env_variable]], opts[:source_direcotry])
+      env_data = load_file(ENV[opts[:env_variable]], opts[:source_directory])
     end
 
     @_test_config = TestConfig::HashHelpers.deep_merge(default_data, env_data)
