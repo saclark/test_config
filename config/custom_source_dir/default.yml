@@ -1,1 +1,2 @@
-default_test_value: 'from config/custom_source_dir/default.yml'
+config_custom_source_dir_default: 'from config/custom_source_dir/default.yml'
+common_key: 'value from config/custom_source_dir/default.yml'

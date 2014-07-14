@@ -1,0 +1,3 @@
+<% variable_value = 'value from erb in config/environments/custom_default.yml' %>
+
+value_from_erb: <%= variable_value %>

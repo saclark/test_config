@@ -1,8 +1,2 @@
-existing_truthy: 'key value'
-existing_falsey: false
-data_hash:
-  array_data:
-    - 'first item'
-    - 'second item'
-overwritten_data: 'from default.yml'
-default_test_value: 'from config/environments/default.yml'
+config_environments_default: 'from config/environments/default.yml'
+common_key: 'value from config/environments/default.yml'

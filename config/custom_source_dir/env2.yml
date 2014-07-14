@@ -1,0 +1,2 @@
+config_custom_source_dir_env2: 'from config/custom_source_dir/env2.yml'
+common_key: 'value from config/custom_source_dir/env2.yml'

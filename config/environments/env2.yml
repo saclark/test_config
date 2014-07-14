@@ -1,0 +1,2 @@
+config_environments_env2: 'from config/environments/env2.yml'
+common_key: 'value from config/environments/env2.yml'
