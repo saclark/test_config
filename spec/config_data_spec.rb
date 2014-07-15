@@ -54,8 +54,7 @@ describe TestConfig::ConfigData do
     end
 
     it "should take a list of files and return a new hash containing @data merged with the files' contents" do
-      @config_data.load!('config/environments/load_me.yml', 'config/environments/env.yml')
-      @config_data.data.should == {
+      @config_data.load('config/environments/load_me.yml', 'config/environments/env.yml').should == {
         :existing_truthy => 'key value',
         :config_environments_load_me => 'from config/environments/load_me.yml',
         :config_environments_env => 'from config/environments/env.yml',
