@@ -1,6 +1,6 @@
 # TestConfig
 
-[![Build Status](https://travis-ci.org/saclark/test_config.svg?branch=master)](https://travis-ci.org/saclark/test_config) [![Coverage Status](https://coveralls.io/repos/saclark/test_config/badge.png)](https://coveralls.io/r/saclark/test_config)
+[![Gem Version](https://badge.fury.io/rb/test_config.svg)](http://badge.fury.io/rb/test_config) [![Build Status](https://travis-ci.org/saclark/test_config.svg?branch=master)](https://travis-ci.org/saclark/test_config) [![Coverage Status](https://coveralls.io/repos/saclark/test_config/badge.png)](https://coveralls.io/r/saclark/test_config)
 
 TestConfig provides flexible cross-environment configuration management for your test suites by allowing you to store configuration data in YAML files and accessing that data through methods on the TestConfig module matching the desired key.
 
