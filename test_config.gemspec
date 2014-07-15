@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TestConfig::VERSION
   spec.authors       = ['Scott Clark']
   spec.email         = ['sclarkdev@gmail.com']
-  spec.summary       = 'Flexible cucumber test configuration.'
-  spec.description   = 'A flexible means of configuration for cucumber tests.'
+  spec.summary       = 'Flexible test configuration.'
+  spec.description   = 'A flexible means of configuration for automated tests across environments.'
   spec.homepage      = 'https://github.com/saclark/test_config'
   spec.license       = 'MIT'
 
