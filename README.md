@@ -102,12 +102,12 @@ Here is a breakdown of each option:
 - Set to `config/environments` by default.
 
 #### `:base_config`
-- Tells TestConfig which file to use for "base configuration" (i.e. configuration data common to all test environments). This should be the filename or filepath to a 
+- Tells TestConfig which file from your `source_directory` to use for "base configuration" (i.e. configuration data common to all test environments).
 - Set to `default.yml` by default.
 - Can be set to `nil` to prevent TestConfig from looking for a base configuration file.
 
 #### `:env_variable`
-- Tells TestConfig which environment variable (if present) to use for determining which additional configuration files to load. The environment variable should contain a comma separated list of filenames/filepaths from the `:source_directory` to be loaded and _merged in_ with previously loaded data (data from a previously loaded file whose key matches one from a freshly loaded file will be overwritten).
+- Tells TestConfig which environment variable (if present) to use for determining which additional configuration files to load. The environment variable should contain a filename (or comma separated list of multiple filenames) to load from the `:source_directory` and _merge in_ with the data from your `base_config`.
 - Set to `TEST_ENV` by default.
 - Can be set to `nil` to prevent TestConfig from looking for additional configuration files.
 
