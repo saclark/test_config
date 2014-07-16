@@ -88,7 +88,7 @@ describe TestConfig do
   end
 
   describe '#read' do
-    it 'should return a symblized hash of file data' do
+    it 'should return a symbolized hash of file data' do
       TestConfig.read('config/environments/custom_default.yml').should == {
         :config_environments_custom_default => 'from config/environments/custom_default.yml',
         :common_key => 'value from config/environments/custom_default.yml'

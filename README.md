@@ -23,7 +23,7 @@ Or install it yourself as:
 Then be sure to `require 'test_config'` in your project.
 
 ## Usage
-By default, TestConfig looks in a `config/environments` directory to load a `default.yml` file containing configuration data. It also loads and _merges in_ any additional configuration data from files listed in a `TEST_ENV` environment variable, if present.
+By default, TestConfig looks in a `config/environments` directory to load a `default.yml` file containing configuration data. It also loads and _merges in_ any additional configuration data from files listed in a `TEST_ENV` environment variable, if present. You can then access this data in your tests by calling methods on the TestConfig module matching the desired key (i.e. `TestConfig.base_url`).
 
 Each of these names and locations are options that can be [configured](#configuration-options).
 
