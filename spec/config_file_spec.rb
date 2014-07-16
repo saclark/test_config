@@ -22,7 +22,7 @@ describe TestConfig::ConfigFile do
 
   describe '#to_s' do
     it 'should return the file contents as a string' do
-      @config_file.to_s.should == "config_environments_default: 'from config/environments/default.yml'\ncommon_key: 'value from config/environments/default.yml'\n"
+      @config_file.to_s.should match %r(\n*config_environments_default: 'from config/environments/default.yml'\ncommon_key: 'value from config/environments/default.yml'\n*)
     end
 
     it 'should raise an erorr if the file is not found' do
@@ -33,7 +33,7 @@ describe TestConfig::ConfigFile do
   describe '#evaluate' do
     it 'should return the file contents as a string with erb evaluated' do
       file_with_erb = TestConfig::ConfigFile.new('config/environments/has_erb.yml')
-      file_with_erb.evaluate.should include("value_from_erb: value from erb in config/environments/custom_default.yml")
+      file_with_erb.evaluate.should match %r(\n*value_from_erb: value from erb in config/environments/custom_default.yml\n*)
     end
   end
 
