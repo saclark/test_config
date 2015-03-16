@@ -1,3 +1,8 @@
+### This gem is being deprecated in favor of [Accessible](https://github.com/saclark/accessible)
+No further development will be carried out on the [TestConfig](https://github.com/saclark/test_config#testconfig) gem. Please consider migrating to the [Accessible](https://github.com/saclark/accessible) gem.
+
+---
+
 # TestConfig
 
 [![Gem Version](https://badge.fury.io/rb/test_config.svg)](http://badge.fury.io/rb/test_config) [![Build Status](https://travis-ci.org/saclark/test_config.svg?branch=master)](https://travis-ci.org/saclark/test_config) [![Coverage Status](https://coveralls.io/repos/saclark/test_config/badge.png)](https://coveralls.io/r/saclark/test_config)
