@@ -1,5 +1,5 @@
 ### This gem is being deprecated in favor of [Accessible](https://github.com/saclark/accessible)
-No further development will be carried out on the [TestConfig](https://github.com/saclark/test_config#testconfig) gem. Please consider migrating to the [Accessible](https://github.com/saclark/accessible) gem.
+No further development will be carried out on the TestConfig gem. Please consider migrating to the [Accessible](https://github.com/saclark/accessible) gem.
 
 ---
 
